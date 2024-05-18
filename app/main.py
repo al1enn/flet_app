@@ -171,7 +171,7 @@ def main(page: Page):
             controls=[
                 ft.Row(
                     controls=[
-                        ft.Row(controls=[ft.ElevatedButton(
+                        ft.ElevatedButton(
                             height=50,
                             text="Upload image",
                             icon=ft.icons.UPLOAD_FILE,
@@ -180,8 +180,12 @@ def main(page: Page):
                             on_click=lambda _: pick_files_dialog.pick_files(
                                 allow_multiple=False
                             ),
-                        ), ]),
+                        ),
 
+                    ]
+                ),
+                ft.Row(
+                    controls=[
                         ft.Row(controls=[ft.Column(controls=[
                             ft.Row(
                                 controls=[EnterName()]),
@@ -193,9 +197,8 @@ def main(page: Page):
 
                                 alignment=ft.MainAxisAlignment.CENTER,
                             )])]),
-
                     ]
-                ),
+                )
 
             ]
         ),
